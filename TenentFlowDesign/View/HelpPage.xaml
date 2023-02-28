@@ -20,30 +20,36 @@
             </Border>
         </Grid>
 
-        <StackLayout VerticalOptions="CenterAndExpand" Spacing="25">
-            <Frame BorderColor="Black" CornerRadius="6" Padding="7" BackgroundColor="#1C1C1C">
-                <StackLayout Orientation="Horizontal"  Spacing="130" >
-                    <Label Text="{x:Static lang:AppResources.faq}"  VerticalTextAlignment="Center" HorizontalOptions="Center"  WidthRequest="202" HeightRequest="29" TextColor="White"  FontFamily="Calibri" FontSize="20" />
-                    <Image Source="write_image.png" HorizontalOptions="Start"/>
-                </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="20">
+            <Frame BorderColor="Black" CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C" >
+                <Grid ColumnDefinitions="*,auto" Margin="10,0">
+                    <Label Text="{x:Static lang:AppResources.faq}"  VerticalTextAlignment="Center" HorizontalOptions="Start"  TextColor="White"  FontFamily="Calibri" FontSize="20" />
+                    <Image Source="write_image.png" HorizontalOptions="End" Grid.Column="1"/>
+                </Grid>
             </Frame>
-            <Frame BorderColor="Black"  CornerRadius="6" Padding="7" BackgroundColor="#1C1C1C">
-                <StackLayout Orientation="Horizontal" Spacing="130" >
-                    <Label Text="{x:Static lang:AppResources.RaiseST}"  VerticalTextAlignment="Center" HorizontalOptions="Center"  WidthRequest="202" HeightRequest="29" TextColor="White"  FontFamily="Calibri" FontSize="20" />
-                    <Image  Source="write_image.png" />
-                </StackLayout>
+            <Frame BorderColor="Black"  CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
+                <Grid ColumnDefinitions="*,auto" Margin="10,0" >
+                    <Label Text="{x:Static lang:AppResources.RaiseST}"  VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="White"  FontFamily="Calibri" FontSize="20" />
+                    <Image  Source="write_image.png" HorizontalOptions="End" Grid.Column="1" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Tapped="OnClickToSupportHelp" 
+                                NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
             </Frame>
-            <Frame BorderColor="Black"  CornerRadius="6" Padding="7" BackgroundColor="#1C1C1C">
-                <StackLayout Orientation="Horizontal" Spacing="130" >
-                    <Label Text="{x:Static lang:AppResources.TandC}"  VerticalTextAlignment="Center" HorizontalOptions="Center"  WidthRequest="202" HeightRequest="29" TextColor="White"  FontFamily="Calibri"  FontSize="20" />
-                    <Image  Source="write_image.png" />
-                </StackLayout>
+            <Frame BorderColor="Black"  CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
+                <Grid ColumnDefinitions="*,auto" Margin="10,0" >
+                    <Label Text="{x:Static lang:AppResources.TandC}" VerticalTextAlignment="Center" HorizontalOptions="Start"   TextColor="White"  FontFamily="Calibri"  FontSize="20" />
+                    <Image Source="write_image.png" HorizontalOptions="End" Grid.Column="1" />
+                </Grid>
             </Frame>
-            <Frame BorderColor="Black"  CornerRadius="6" Padding="7" BackgroundColor="#1C1C1C">
-                <StackLayout Orientation="Horizontal" Spacing="130" >
-                    <Label Text="{x:Static lang:AppResources.Us}"  VerticalTextAlignment="Center" HorizontalOptions="Center"  WidthRequest="202" HeightRequest="29" TextColor="White"  FontFamily="Calibri" FontSize="20"/>
-                    <Image  Source="write_image.png" />
-                </StackLayout>
+            <Frame BorderColor="Black"  CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
+                <Grid ColumnDefinitions="*,auto" Margin="10,0" >
+                    <Label Text="{x:Static lang:AppResources.Us}"  VerticalTextAlignment="Center" HorizontalOptions="Start"  TextColor="White"  FontFamily="Calibri" FontSize="20"/>
+                    <Image Source="write_image.png" HorizontalOptions="End" Grid.Column="1"/>
+                </Grid>
             </Frame>
         </StackLayout>
     </Grid>

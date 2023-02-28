@@ -11,4 +11,9 @@ public partial class HelpPage : ContentPage
     {
 		await Navigation.PopAsync();
     }
+
+    private async void OnClickToSupportHelp(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new SupportHelpPage());
+    }
 }

@@ -36,7 +36,7 @@
             <Frame BorderColor="Black"  CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
                 <StackLayout Orientation="Horizontal" Spacing="160" >
                     <Label Text="Help"  VerticalTextAlignment="Center" HorizontalOptions="Center"  WidthRequest="170" HeightRequest="29" TextColor="White"  FontFamily="Calibri" FontSize="20"/>
-                    <Image Source="write_image.png" />
+                    <ImageButton Clicked="OnClickToHelp"  Source="write_image.png" />
                 </StackLayout>
             </Frame>
         </StackLayout>
