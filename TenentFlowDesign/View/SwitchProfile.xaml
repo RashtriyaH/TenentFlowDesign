@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TenentFlowDesign.View.SwitchProfile"
+             xmlns:lang="clr-namespace:TenentFlowDesign.Resx"
+             BackgroundColor="{StaticResource Black}">
+    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+    
+    <Grid>
+        <Grid VerticalOptions="Start" >
+            <Border Stroke="#1C1C1C" WidthRequest="400" HeightRequest="150" VerticalOptions="Start" >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,20,20" />
+                </Border.StrokeShape>
+                <Grid RowDefinitions="auto,auto,67" ColumnDefinitions="170,103" BackgroundColor="#1C1C1C" RowSpacing="-6" Margin="-20" >
+                    <ImageButton Clicked="OnclickBackToSettings" BackgroundColor="Red" WidthRequest="40" HorizontalOptions="Start" Margin="20,25,10,10" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="SWITCH PROFILE" FontSize="22" Grid.Row="1" HeightRequest="31" WidthRequest="186"  FontFamily="Poppins"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" TextColor="White"/>
+                    <Image Source="settings_image.png" Grid.Row="2" WidthRequest="50" HeightRequest="45"  HorizontalOptions="Center"  Grid.Column="1"/>
+                </Grid>
+            </Border>
+        </Grid>
+        
+        <Grid RowDefinitions="auto,auto" HorizontalOptions="Center" HeightRequest="250"  Margin="50">
+            <Grid Grid.Row="0" ColumnDefinitions="auto,200" ColumnSpacing="20" >
+                <Switch IsToggled="True" Grid.Column="0"/>
+                <Label Text="{x:Static lang:AppResources.Ten}" Grid.Column="1" VerticalTextAlignment="Start" HorizontalOptions="Start"  WidthRequest="91" HeightRequest="29" TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20" />
+            </Grid>
+            <Grid Grid.Row="1" ColumnDefinitions="auto,200" ColumnSpacing="20" >
+                <Switch IsToggled="True" Grid.Column="0"/>
+                <Label Text="{x:Static lang:AppResources.Landl}" Grid.Column="1" VerticalTextAlignment="Start" HorizontalOptions="Start"  WidthRequest="91" HeightRequest="29" TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20" />
+            </Grid>
+        </Grid>
+
+      
+            <Grid  HorizontalOptions="CenterAndExpand" Margin="50,200,50,10">
+                <Button Text="Add Account" BorderColor="#88733F" BorderWidth="1" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Poppins" FontAttributes="Bold" FontSize="18" CornerRadius="2" >
+                    <Button.Shadow>
+                        <Shadow Brush="#00000080" Opacity="160" />
+                    </Button.Shadow>
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#D5B15D"/>
+                            <GradientStop Color="#FDFAC5"/>
+                            <GradientStop Color="#F3D484" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+      
+    </Grid>
+</ContentPage>
