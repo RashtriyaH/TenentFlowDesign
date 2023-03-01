@@ -61,11 +61,29 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to App Notification.
+        /// </summary>
+        internal static string Appnotifi {
+            get {
+                return ResourceManager.GetString("Appnotifi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change Transaction Password.
         /// </summary>
         internal static string ChangePassword {
             get {
                 return ResourceManager.GetString("ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        internal static string ConfirPW {
+            get {
+                return ResourceManager.GetString("ConfirPW", resourceCulture);
             }
         }
         
@@ -88,6 +106,15 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gullak Task Updates.
+        /// </summary>
+        internal static string gulakTU {
+            get {
+                return ResourceManager.GetString("gulakTU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Landlord.
         /// </summary>
         internal static string Landl {
@@ -102,6 +129,33 @@ namespace TenentFlowDesign.Resx {
         internal static string Notification {
             get {
                 return ResourceManager.GetString("Notification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Offer Updates.
+        /// </summary>
+        internal static string OfferU {
+            get {
+                return ResourceManager.GetString("OfferU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Passwd {
+            get {
+                return ResourceManager.GetString("Passwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment Updates.
+        /// </summary>
+        internal static string payupdat {
+            get {
+                return ResourceManager.GetString("payupdat", resourceCulture);
             }
         }
         

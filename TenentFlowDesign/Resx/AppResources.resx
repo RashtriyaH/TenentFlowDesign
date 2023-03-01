@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Appnotifi" xml:space="preserve">
+    <value>App Notification</value>
+  </data>
   <data name="ChangePassword" xml:space="preserve">
     <value>Change Transaction Password</value>
+  </data>
+  <data name="ConfirPW" xml:space="preserve">
+    <value>Confirm Password</value>
   </data>
   <data name="CreatePassword" xml:space="preserve">
     <value>Create Transaction Password</value>
@@ -126,11 +132,23 @@
   <data name="faq" xml:space="preserve">
     <value>FAQ</value>
   </data>
+  <data name="gulakTU" xml:space="preserve">
+    <value>Gullak Task Updates</value>
+  </data>
   <data name="Landl" xml:space="preserve">
     <value>Landlord</value>
   </data>
   <data name="Notification" xml:space="preserve">
     <value>NOTIFICATION</value>
+  </data>
+  <data name="OfferU" xml:space="preserve">
+    <value>Offer Updates</value>
+  </data>
+  <data name="Passwd" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="payupdat" xml:space="preserve">
+    <value>Payment Updates</value>
   </data>
   <data name="RaiseST" xml:space="preserve">
     <value>Raise Support Ticket</value>

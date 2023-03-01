@@ -9,6 +9,6 @@ public partial class SupportHelpPage : ContentPage
 
     private async void OnclickBackToSettings(object sender, EventArgs e)
     {
-		await Navigation.PopModalAsync();
+		await Navigation.PopAsync();
     }
 }

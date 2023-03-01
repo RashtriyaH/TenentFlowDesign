@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using TenentFlowDesign.View;
+using TenentFlowDesign.View.SecurityAndPrivacy;
+using TenentFlowDesign.ViewModel;
 
 namespace TenentFlowDesign;
 
@@ -15,8 +18,22 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+		//ViewModel
+		builder.Services.AddTransient<TappedClassViewModel>();
+
+		//View
+		builder.Services.AddSingleton<SettingsPage>();
+		builder.Services.AddSingleton<NotificationsPage>();
+		builder.Services.AddSingleton<SecurityAndPrivacy>();
+		builder.Services.AddSingleton<SwitchProfile>();
+		builder.Services.AddSingleton<HelpPage>();
+
+		//SecurityAndPrivacy
+        builder.Services.AddSingleton<CreateTransactionPage>();
+
+
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
 		return builder.Build();
