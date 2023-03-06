@@ -35,6 +35,10 @@
                 <StackLayout Orientation="Horizontal" HeightRequest="96"  WidthRequest="360" Spacing="110" >
                     <Label Text="{x:Static lang:AppResources.ChangePassword}"  VerticalTextAlignment="End"  WidthRequest="200" HeightRequest="58" TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20" />
                     <Image Source="write_image.png" HorizontalOptions="Start"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="7" />
+                    </StackLayout.GestureRecognizers>
                 </StackLayout>
             </Frame>
         </StackLayout>

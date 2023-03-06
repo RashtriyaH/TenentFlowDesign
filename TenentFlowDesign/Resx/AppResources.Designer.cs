@@ -70,6 +70,15 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm New Password.
+        /// </summary>
+        internal static string CfrmNwPwd {
+            get {
+                return ResourceManager.GetString("CfrmNwPwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change Transaction Password.
         /// </summary>
         internal static string ChangePassword {
@@ -97,6 +106,15 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current Password.
+        /// </summary>
+        internal static string CrntPwd {
+            get {
+                return ResourceManager.GetString("CrntPwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to FAQ.
         /// </summary>
         internal static string faq {
@@ -120,6 +138,15 @@ namespace TenentFlowDesign.Resx {
         internal static string Landl {
             get {
                 return ResourceManager.GetString("Landl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Password.
+        /// </summary>
+        internal static string Newpwd {
+            get {
+                return ResourceManager.GetString("Newpwd", resourceCulture);
             }
         }
         

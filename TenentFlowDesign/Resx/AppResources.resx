@@ -120,6 +120,9 @@
   <data name="Appnotifi" xml:space="preserve">
     <value>App Notification</value>
   </data>
+  <data name="CfrmNwPwd" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
   <data name="ChangePassword" xml:space="preserve">
     <value>Change Transaction Password</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="CreatePassword" xml:space="preserve">
     <value>Create Transaction Password</value>
   </data>
+  <data name="CrntPwd" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
   <data name="faq" xml:space="preserve">
     <value>FAQ</value>
   </data>
@@ -137,6 +143,9 @@
   </data>
   <data name="Landl" xml:space="preserve">
     <value>Landlord</value>
+  </data>
+  <data name="Newpwd" xml:space="preserve">
+    <value>New Password</value>
   </data>
   <data name="Notification" xml:space="preserve">
     <value>NOTIFICATION</value>

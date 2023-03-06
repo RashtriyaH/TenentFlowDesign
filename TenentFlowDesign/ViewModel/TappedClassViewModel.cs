@@ -38,6 +38,9 @@ namespace TenentFlowDesign.ViewModel
                 case "6":
                     await Application.Current.MainPage.Navigation.PushAsync(new CreateTransactionPage());
                     break;
+                case "7":
+                    await Application.Current.MainPage.Navigation.PushAsync(new ChangeTransactionPasswordPage());
+                    break;
             }
         }
     }

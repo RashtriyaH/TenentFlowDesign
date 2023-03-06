@@ -30,12 +30,11 @@
             <Frame BorderColor="Black"  CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
                 <Grid ColumnDefinitions="*,auto" Margin="10,0" >
                     <Label Text="{x:Static lang:AppResources.RaiseST}"  VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="White"  FontFamily="Calibri" FontSize="20" />
-                    <Image  Source="write_image.png" HorizontalOptions="End" Grid.Column="1" >
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer 
+                    <Image  Source="write_image.png" HorizontalOptions="End" Grid.Column="1" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer 
                                  Command="{Binding TapCommandToMoveCommand}" CommandParameter="5" />
-                        </Image.GestureRecognizers>
-                    </Image>
+                    </Grid.GestureRecognizers>
                 </Grid>
             </Frame>
             <Frame BorderColor="Black"  CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
