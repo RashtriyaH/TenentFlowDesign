@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using TenentFlowDesign.Controls;
+using TenentFlowDesign;
 using TenentFlowDesign.View;
 using TenentFlowDesign.View.SecurityAndPrivacy;
 using TenentFlowDesign.ViewModel;

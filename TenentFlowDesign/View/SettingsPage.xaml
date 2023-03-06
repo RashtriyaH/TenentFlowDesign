@@ -31,7 +31,7 @@
                     <Image  Source="write_image.png"/>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer 
-                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="1" />
+                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="2" />
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
             </Frame>
@@ -41,7 +41,7 @@
                     <Image Source="write_image.png" />
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer 
-                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="1" />
+                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="3" />
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
             </Frame>
@@ -51,7 +51,7 @@
                     <Image   Source="write_image.png"/>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer 
-                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="1" />
+                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="4" />
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
             </Frame>

@@ -1,6 +1,7 @@
-﻿namespace TenentFlowDesign.Controls
+﻿
+namespace TenentFlowDesign
 {
-    public class CustomEntryForCreateTransPage:Entry
+    public class CustomEntryForCreateTransPage: Entry
     {
 
     }

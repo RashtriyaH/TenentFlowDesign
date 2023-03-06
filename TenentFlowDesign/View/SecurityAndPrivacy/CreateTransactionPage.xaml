@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:lang="clr-namespace:TenentFlowDesign.Resx"
-              xmlns:c="clr-namespace:TenentFlowDesign.Controls"
+              xmlns:c="clr-namespace:TenentFlowDesign"
+              xmlns:local="clr-namespace:TenentFlowDesign;assembly=TenentFlowDesign"
              x:Class="TenentFlowDesign.View.SecurityAndPrivacy.CreateTransactionPage"
              BackgroundColor="{StaticResource Black}">
     <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+    
     
     <Grid>
         <Grid VerticalOptions="Start">
@@ -19,37 +21,25 @@
 
             <Grid RowDefinitions="auto,*" RowSpacing="5" >
                 <Label Text="{x:Static lang:AppResources.Passwd}" HorizontalOptions="Start" VerticalTextAlignment="Center" TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20"/>
-                <Entry Placeholder="Enter Password"   Background="{StaticResource Gray100}" Grid.Row="1"/>
+                <!--<Entry Placeholder="Enter Password"   Background="{StaticResource Gray100}" Grid.Row="1"/>-->
                 <!--<c:CustomEntryForCreateTransPage  Grid.Row="1" BackgroundColor="{StaticResource Gray100}" Keyboard="Default"  />
             -->
                 <!--<Frame Grid.Row="1" >
                 <controls:CustomEntryForCreateTransPage  Keyboard="Default" ></controls:CustomEntryForCreateTransPage>
             -->
                 <!--</Frame>-->
+                <Border Grid.Row="1" BackgroundColor="Transparent"    StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                    <local:CustomEntryForCreateTransPage TextColor="White" Placeholder="Enter Password" />
+                </Border>
 
             </Grid>
             <Grid RowDefinitions="auto,*" RowSpacing="5" >
                 <Label Text="{x:Static lang:AppResources.ConfirPW}" HorizontalOptions="Start" VerticalTextAlignment="Center" TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20"/>
                 <Border Grid.Row="1" BackgroundColor="Transparent"    StrokeShape="RoundRectangle 7" StrokeThickness="1">
-                    <Entry Placeholder="Re-Enter Password" />
+                    <Entry Placeholder="Re-Enter Password" TextColor="White" />
                 </Border>
             </Grid>
-
-            <!--<Grid RowDefinitions="auto,*" >
-            <Button Text="Submit" HorizontalOptions="CenterAndExpand"  Grid.Row="0" BorderColor="#88733F" BorderWidth="1" TextColor="Black" FontFamily="Poppins"  FontSize="17" CornerRadius="60"  >
-                <Button.Shadow>
-                    <Shadow Brush="#00000033" Opacity="100" />
-                </Button.Shadow>
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#D6B25E"/>
-                        <GradientStop Color="#F1E4A5"/>
-                        <GradientStop Color="#FDFAC5"/>
-                        <GradientStop Color="#D6B25E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-        </Grid>-->
+        
             <Grid ColumnDefinitions="*,*,*">
                 <Button Text="Submit" BorderColor="#88733F" BorderWidth="1" Grid.Column="1" TextColor="Black" FontFamily="Poppins"
                     FontSize="17" CornerRadius="150" Clicked="OnCLickToEndPage"  >
