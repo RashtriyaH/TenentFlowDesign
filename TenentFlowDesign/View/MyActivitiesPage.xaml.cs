@@ -11,9 +11,8 @@ public partial class MyActivitiesPage : ContentPage
     {
 		await Navigation.PopAsync();
     }
-
     private async void OnTappedToNextPage(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new SettingsPage());
+        await Navigation.PushAsync(new CommingSoonPage());
     }
 }
