@@ -36,7 +36,7 @@
             <Image Source="clock_image.png" Grid.Row="1"   HeightRequest="65" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
             <Label Text="Mutual Funds" Grid.Row="1"  Grid.Column="1" TextColor="White"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
             
-            <BoxView Grid.Row="2" Color="Red" />
+            <BoxView Grid.Row="2" Color="Transparent" />
             <Image Source="clock_image.png" Grid.Row="2"   HeightRequest="65" HorizontalOptions="Center" VerticalOptions="Center" />
             <Label Text="Insurance Services" Grid.Row="2" TextColor="White"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
             

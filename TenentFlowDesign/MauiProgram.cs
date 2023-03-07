@@ -23,14 +23,18 @@ public static class MauiProgram
         builder.Services.AddTransient<TappedClassViewModel>();
 
 		//View
+		//View Settings
 		builder.Services.AddSingleton<SettingsPage>();
 		builder.Services.AddSingleton<NotificationsPage>();
 		builder.Services.AddSingleton<SecurityAndPrivacy>();
 		builder.Services.AddSingleton<SwitchProfile>();
 		builder.Services.AddSingleton<HelpPage>();
-		builder.Services.AddSingleton<MyActivitiesPage>();
 
-        //SecurityAndPrivacy
+		//View My Activity 
+		builder.Services.AddSingleton<MyActivitiesPage>();
+		builder.Services.AddSingleton<CommingSoonPage>();
+
+        //View SecurityAndPrivacy
         builder.Services.AddTransient<CreateTransactionPage>();
 
 
