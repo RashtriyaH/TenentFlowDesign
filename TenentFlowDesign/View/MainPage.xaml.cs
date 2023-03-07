@@ -1,4 +1,6 @@
-﻿namespace TenentFlowDesign;
+﻿using TenentFlowDesign.View;
+
+namespace TenentFlowDesign;
 
 public partial class MainPage : ContentPage
 {
@@ -10,6 +12,11 @@ public partial class MainPage : ContentPage
     private async void OnTapGestureRecognizerTapped(object sender, TappedEventArgs e)
     {
 		await Navigation.PushAsync(new SettingsPage());
+    }
+
+    private async void OnTapGestureToOtherPage(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new MyActivitiesPage());
     }
 }
 

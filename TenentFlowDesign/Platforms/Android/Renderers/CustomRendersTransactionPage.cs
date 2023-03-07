@@ -8,7 +8,7 @@ using TenentFlowDesign.Android;
 [assembly: ExportRenderer(typeof(CustomEntryForCreateTransPage), typeof(CustomRendersTransactionPage))]
 namespace TenentFlowDesign.Android
 {
-    class CustomRendersTransactionPage : EntryRenderer
+     class CustomRendersTransactionPage : EntryRenderer
     {
         public CustomRendersTransactionPage(Context context) : base(context)
         {

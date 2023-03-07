@@ -3,16 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TenentFlowDesign.MainPage"
              BackgroundColor="{StaticResource Black}">
-    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+            <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
     
-    <Grid Margin="20">
-        <Grid HeightRequest="250"  VerticalOptions="Start" RowDefinitions="auto,auto" Margin="25,20,40,40"  >
-            <Label Text="Kim Jogin " HorizontalOptions="End" Grid.Row="0" VerticalOptions="Center" TextColor="Red"  />
-            <Frame Margin="30"  BorderColor="Black" Grid.Row="0" CornerRadius="90"  HeightRequest="100"  WidthRequest="100" IsClippedToBounds="True" HorizontalOptions="Start" VerticalOptions="Center">
-                <Image Source="kai_image.jpg" Aspect="AspectFill" Margin="20" HeightRequest="100" WidthRequest="100" />
-            </Frame>
+    <Grid Margin="20" >
+        <Grid VerticalOptions="Start" RowDefinitions="auto,auto" Margin="10" >
+            <Label Text="Kim Jogin " HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"  TextColor="#D6B25E"  />
+            <Label Text=" Group of EXO " HorizontalOptions="Center" VerticalOptions="End" Grid.Row="0"  TextColor="#D6B25E"  />
+            <Image Source="kai_image.jpg" Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" />
         </Grid>
-        <StackLayout HeightRequest="300">
+        
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" >
             <Frame  CornerRadius="40" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#707070"  HeightRequest="398" WidthRequest="384" BackgroundColor="#1C1C1C">
                 <Grid RowDefinitions="100,90,140" ColumnDefinitions="*,*,*"  >
                     <Label Text="My Account" TextColor="#FFFFFF" FontSize="20" FontFamily="Calibri" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"/>
@@ -43,6 +43,10 @@
                     <StackLayout  Grid.Row="2" Grid.Column="1">
                         <Image Source="clock_image.png" HeightRequest="45" WidthRequest="45" />
                         <Label Text="My Activities" TextColor="White"  Margin="7"  FontSize="12" VerticalTextAlignment="Center" HorizontalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnTapGestureToOtherPage"/>
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
 
                     <StackLayout  Grid.Row="2"

@@ -11,4 +11,9 @@ public partial class ChangeTransactionPasswordPage : ContentPage
     {
 		await Navigation.PopAsync();
     }
+
+    private async void OnCLickToChangeTransPage(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PwdPageOfChangeTransPage());
+    }
 }

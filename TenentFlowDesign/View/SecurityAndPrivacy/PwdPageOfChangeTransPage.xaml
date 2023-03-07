@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TenentFlowDesign.View.SecurityAndPrivacy.PasswordPageOfTransactionPage"
-             Title="PasswordPageOfTransactionPage"
+             x:Class="TenentFlowDesign.View.SecurityAndPrivacy.PwdPageOfChangeTransPage"
+             Title="PwdPageOfChangeTransPage"
              BackgroundColor="{StaticResource Black}">
     <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
 
@@ -15,12 +15,12 @@
                         <FormattedString.Spans>
                             <Span Text="Congratulations !" TextColor="#F3E29D" />
                             <Span Text="&#10; Your Password" TextColor="#F3E29D" />
-                            <Span Text="&#10; has been Created" TextColor="#F3E29D" />
+                            <Span Text="&#10; has been changed" TextColor="#F3E29D" />
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
         </Grid>
     </Frame>
-   
+
 </ContentPage>

@@ -28,8 +28,9 @@ public static class MauiProgram
 		builder.Services.AddSingleton<SecurityAndPrivacy>();
 		builder.Services.AddSingleton<SwitchProfile>();
 		builder.Services.AddSingleton<HelpPage>();
+		builder.Services.AddSingleton<MyActivitiesPage>();
 
-		//SecurityAndPrivacy
+        //SecurityAndPrivacy
         builder.Services.AddTransient<CreateTransactionPage>();
 
 
