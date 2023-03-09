@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TenentFlowDesign.View.Payment.EditPageInAccountDetails"
+             Title="EditPageInAccountDetails"  BackgroundColor="{StaticResource Black}">
+    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+
+    <Grid>
+        <Grid VerticalOptions="Start">
+            <Image Source="backgroundtop_image.png" Aspect="AspectFit" Margin="0,-100,-80,0"  VerticalOptions="Start" />
+            <Grid RowDefinitions="auto,auto,auto">
+                <ImageButton Source="back_arrow.png" Clicked="OnClickToAccountPage" BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,38,20,10" Grid.Row="0" />
+                <Label Text="Bank Accounts" Margin="10,30,0,0" Grid.Row="0" HorizontalOptions="Center" FontSize="17" VerticalOptions="Center" TextColor="Gray" />
+            </Grid>
+            <StackLayout VerticalOptions="End" Margin="20,0,20,80">
+                <Label Text="My Account Details" FontAttributes="Bold" FontSize="25" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            </StackLayout>
+        </Grid>
+        <Grid>
+            <StackLayout VerticalOptions="Center" Margin="40,-350,0,-60" Spacing="10" >
+                <Frame  CornerRadius="6" Padding="5" BackgroundColor="Transparent" BorderColor="Transparent">
+                    <Grid ColumnDefinitions="50,150,80" ColumnSpacing="15">
+                        <Image Source="write_image.png"  />
+                        <Label Text="Indian Bank x6983"  Grid.Column="1" VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
+                        <Image Source="dustbin_image.jpg"  Grid.Column="2" HorizontalOptions="End" WidthRequest="15" HeightRequest="20"/>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                  Command="{Binding TapCommandToMoveCommand}" CommandParameter="2" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </Frame>
+                <Frame  CornerRadius="6" Padding="5" BackgroundColor="Transparent" BorderColor="Transparent">
+                    <Grid ColumnDefinitions="50,150,80" ColumnSpacing="15">
+                        <Image Source="write_image.png"  />
+                        <Label Text="HDFC Bank 9869"  Grid.Column="1" VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
+                        <Image Source="dustbin_image.jpg"  Grid.Column="2" HorizontalOptions="End" WidthRequest="15" HeightRequest="20"/>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                  Command="{Binding TapCommandToMoveCommand}" CommandParameter="2" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </Grid>
+        <Grid VerticalOptions="Center" Margin="30,50,0,0" >
+            <Line Stroke="#F3E29D" X1="3500" Y1="350" X2="0" Y2="350" />
+        </Grid>
+
+        <Grid>
+            <StackLayout VerticalOptions="End" Spacing="20" Margin="40,0,10,230">
+                <Label Text="Landlord Account Details" Margin="20" FontAttributes="Bold" FontSize="25" TextColor="White"/>
+                <Frame  CornerRadius="6" Padding="5" BackgroundColor="Transparent" BorderColor="Transparent">
+                    <Grid ColumnDefinitions="50,150,80" ColumnSpacing="15">
+                        <Image Source="write_image.png"  />
+                        <Label Text="HDFC Bank 9869 - LL1"  Grid.Column="1" VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
+                        <Image Source="dustbin_image.jpg"  Grid.Column="2" HorizontalOptions="End" WidthRequest="15" HeightRequest="20"/>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                  Command="{Binding TapCommandToMoveCommand}" CommandParameter="2" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TenentFlowDesign.View.MyTenancies.MyTenanciesPage"
+             Title="MyTenanciesPage"  
+             BackgroundColor="{StaticResource Black}">
+    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+    
+    <Grid>
+        <Grid VerticalOptions="Start">
+            <Border Stroke="#1C1C1C" WidthRequest="400" HeightRequest="150" VerticalOptions="Start">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,20,20" />
+                </Border.StrokeShape>
+                <Grid RowDefinitions="auto,auto,67" ColumnDefinitions="170,103" BackgroundColor="#1C1C1C" RowSpacing="-6" Margin="-20" >
+                    <ImageButton Clicked="OnclickBackToMainPage"  Source="back_arrow.png" BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="35,35,20,10" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="My Tenancies" FontSize="22" Grid.Row="1" HeightRequest="31" WidthRequest="150"  FontFamily="Poppins"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" TextColor="White"/>
+                    <Image Source="settings_image.png" Grid.Row="2" WidthRequest="50" HeightRequest="45"  HorizontalOptions="Center"  Grid.Column="1"/>
+                </Grid>
+            </Border>
+        </Grid>
+        
+        <Grid ColumnDefinitions="*,*" HeightRequest="100">
+            <Frame BackgroundColor="Transparent" BorderColor="Transparent" Grid.Column="0">
+                <Button x:Name="btn1" Clicked="OnTappedTOChangeOne" BackgroundColor="Orange" Text="submit1" FontSize="Body" />
+            </Frame>
+            <Frame  BackgroundColor="Transparent" BorderColor="Transparent"  Grid.Column="1">
+                <Button x:Name="btn2" Clicked="OnTappedTOChangeTwo" BackgroundColor="Red" Text="Submit2" FontSize="Body" />
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

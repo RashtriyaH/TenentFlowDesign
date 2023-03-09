@@ -8,7 +8,8 @@ using TenentFlowDesign.Android;
 [assembly: ExportRenderer(typeof(CustomEntryForCreateTransPage), typeof(CustomRendersTransactionPage))]
 namespace TenentFlowDesign.Android
 {
-     class CustomRendersTransactionPage : EntryRenderer
+    [Obsolete]
+    class CustomRendersTransactionPage : EntryRenderer
     {
         public CustomRendersTransactionPage(Context context) : base(context)
         {
@@ -17,13 +18,11 @@ namespace TenentFlowDesign.Android
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
-
             if (e.OldElement == null)
             {
                 Control.Background = null;
             }
         }
     }
-
 }
 

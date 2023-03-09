@@ -33,11 +33,19 @@
                     <StackLayout  Grid.Row="1" Grid.RowSpan="1" Grid.Column="2">
                         <Image Source="house_image.png" HeightRequest="45" WidthRequest="45"/>
                         <Label Text="My Tenancies" TextColor="White"  Margin="7" FontSize="12" VerticalTextAlignment="Center" HorizontalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnTapGestureToMyTenanciesPage"/>
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
                     <StackLayout  Grid.Row="2"
                              Grid.Column="0">
                         <Image Source="payment_image.png" HeightRequest="45" WidthRequest="45"/>
                         <Label Text="Payment" TextColor="White"  Margin="7"  FontSize="12" VerticalTextAlignment="Center" HorizontalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnTapGestureToMyPaymentsPage"/>
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
 
                     <StackLayout  Grid.Row="2" Grid.Column="1">

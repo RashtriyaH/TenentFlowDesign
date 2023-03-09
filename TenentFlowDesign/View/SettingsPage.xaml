@@ -7,11 +7,12 @@
 
     <Grid>
         <Grid VerticalOptions="Start">
-            <Grid RowDefinitions="auto,auto,67" ColumnDefinitions="150,100" BackgroundColor="Transparent" RowSpacing="-6" Margin="-20" >
-                <ImageButton Clicked="OnclickBack" Source="back_arrow.png" BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="35,35,20,10" Grid.Row="0" Grid.Column="0"/>
-                <Label Text="SETTINGS" FontSize="22" Grid.Row="1" HeightRequest="35" WidthRequest="108" FontFamily="Poppins" VerticalOptions="Start" HorizontalOptions="Center"  Grid.Column="1" TextColor="White"/>
-                <Image Source="settings_image.png" Grid.Row="2" WidthRequest="50" HeightRequest="45"  HorizontalOptions="Center" Grid.Column="1"/>
-            </Grid>
+            <Image Source="backgroundtop_image.png" Aspect="AspectFit" Margin="0,-100,-80,0"  VerticalOptions="Start" />
+                <Grid RowDefinitions="auto,auto,67" ColumnDefinitions="150,100" BackgroundColor="Transparent" RowSpacing="-6" Margin="-20" >
+                    <ImageButton Clicked="OnclickBack" Source="back_arrow.png" BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="35,35,20,10" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="SETTINGS" FontSize="22" Grid.Row="1" HeightRequest="35" WidthRequest="108" FontFamily="Poppins" VerticalOptions="Start" HorizontalOptions="Center"  Grid.Column="1" TextColor="White"/>
+                    <Image Source="settings_image.png" Grid.Row="2" WidthRequest="50" HeightRequest="45"  HorizontalOptions="Center" Grid.Column="1"/>
+                </Grid>
         </Grid>
 
         <StackLayout VerticalOptions="CenterAndExpand" Spacing="20" >
