@@ -21,16 +21,16 @@
                 </Border>
         </Grid>
         <Grid RowDefinitions="130,130,130"  RowSpacing="10" VerticalOptions="Center" ColumnSpacing="10" ColumnDefinitions="*,*" >
-           
-            <StackLayout>
-            <Image Source="clock_image.png"  HeightRequest="65" HorizontalOptions="Center" VerticalOptions="Center" />
-            <Label Text="Digital Services" TextColor="White"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
+
+            <StackLayout Grid.Column="0" BackgroundColor="Transparent" >
+                <Image  Grid.Column="1" HeightRequest="65" Source="clock_image.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Digital Services" Grid.Column="1" TextColor="White"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer
                                 Tapped="OnTappedToNextPage"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
-
+            
             <StackLayout Grid.Column="1" BackgroundColor="Transparent" >
                 <Image  Grid.Column="1" HeightRequest="65" Source="clock_image.png" HorizontalOptions="Center" VerticalOptions="Center" />
                 <Label Text="Instant Profile Check" Grid.Column="1" TextColor="White"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
@@ -66,7 +66,6 @@
                                 Tapped="OnTappedToNextPage"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
-          
         </Grid>
     </Grid>
 </ContentPage>

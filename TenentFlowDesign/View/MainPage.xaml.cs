@@ -1,4 +1,5 @@
 ﻿using TenentFlowDesign.View;
+using TenentFlowDesign.View.MyProfile;
 using TenentFlowDesign.View.MyTenancies;
 using TenentFlowDesign.View.Payment;
 
@@ -29,6 +30,11 @@ public partial class MainPage : ContentPage
     private async void OnTapGestureToMyPaymentsPage(object sender, TappedEventArgs e)
     {
         await Navigation.PushAsync(new BankDetails());
+    }
+
+    private async void OnTappedToProfilePage(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new CreateProfilePage());
     }
 }
 

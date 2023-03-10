@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TenentFlowDesign.View.MyProfile.CreateProfilePage"
+             Title="CreateProfilePage"
+             BackgroundColor="{StaticResource Black}">
+    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+
+    <Grid>
+        <Grid VerticalOptions="Start">
+            <Grid RowDefinitions="100,auto,100,auto"  >
+                <Image Source="backgroundtop_image.png" Aspect="AspectFill" HeightRequest="370" VerticalOptions="Start" Margin="70,-138,-96,-170"/>
+                <ImageButton Source="back_arrow.png" Clicked="OnClickToProfilePage"  BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" />
+                <Image Source="kai_image.png" HorizontalOptions="Center"  VerticalOptions="Center" Grid.Row="2" HeightRequest="184" WidthRequest="184"/>
+                <Image Source="write_image.png" HorizontalOptions="Center"  VerticalOptions="Center" Grid.Row="2" Margin="120,0,0,-110"/>
+                <ImageButton Clicked="OnClicktoEditPage" Source="editgold_image.png" HorizontalOptions="Start"  VerticalOptions="Center" Grid.Row="3" Margin="45,10,10,0"/>
+            </Grid>
+        </Grid>
+        <ScrollView>
+            <StackLayout  Margin="30">
+                <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto" Margin="20,250,25,0">
+                    <StackLayout Spacing="8" Grid.Row="0">
+                        <Label Grid.Row="0" Text="Registered Mobile No"  FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <Entry  Margin="15,0,0,0" Keyboard="Telephone" TextColor="White" Placeholder="+91 9999999999"/>
+                        </Border>
+                    </StackLayout>
+
+                    <StackLayout Spacing="8" Grid.Row="1" Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
+                        <Label Grid.Row="1" Text="Title"  FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1" StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <Entry Margin="15,0,0,0" Placeholder="Kai"/>
+                        </Border>
+                        <Border BackgroundColor="Transparent" Grid.Row="1" StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <Entry Margin="15,0,0,0" Placeholder="Last Name"/>
+                        </Border>
+                    </StackLayout>
+
+                    <StackLayout Spacing="8" Grid.Row="2"  Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
+                        <Label Grid.Row="1" Text="Email ID" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                                <Entry Placeholder="example@gmail.com"/>
+                            </HorizontalStackLayout>
+                        </Border>
+                    </StackLayout>
+
+                    <StackLayout Spacing="8" Grid.Row="3"  Margin="0,20,0,0" Grid.RowSpan="1" Grid.Column="1">
+                        <Label Grid.Row="1" Text="Age"  FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <Entry  Margin="15,0,0,0" Placeholder="25"/>
+                        </Border>
+                    </StackLayout>
+
+                    <StackLayout Spacing="8" Grid.Row="4"  Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
+                        <Label Grid.Row="1" Text="Father Name"  FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <Entry  Margin="15,0,0,0" Placeholder="Enter Father Name"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Spacing="8" Grid.Row="5"  Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
+                        <Label Grid.Row="1" Text="Spouse name"  FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <Entry  Margin="15,0,0,0" Placeholder="Enter Spouse Name"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Spacing="8" Grid.Row="6"  Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
+                        <Label Grid.Row="1" Text="Occupation"  FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <Entry  Margin="15,0,0,0" Placeholder="Enter Occupation"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Spacing="8" Grid.Row="7"  Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
+                        <Label Grid.Row="1" Text="KYC Documents"  FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                            <Entry  Margin="15,0,0,0" Placeholder="Aadhar Card"/>
+                                <Image Source="verified_image.png" Margin="140,0" />
+                            </HorizontalStackLayout>
+                        </Border>
+                        <Border BackgroundColor="Transparent" Grid.Row="1" StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                                <Entry  Margin="15,0,0,0" Placeholder="PAN Card"/>
+                                <Image Source="verified_image.png" Margin="160,0" HorizontalOptions="End"/>
+                            </HorizontalStackLayout>
+                        </Border>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
