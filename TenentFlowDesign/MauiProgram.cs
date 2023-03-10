@@ -26,17 +26,29 @@ public static class MauiProgram
         builder.Services.AddTransient<TappedClassViewModel>();
         builder.Services.AddTransient<PaymentPageViewModel>();
 
+
         //View
         //View Settings
         builder.Services.AddSingleton<SettingsPage>();
+
+		//View
+		//View Settings
+		builder.Services.AddSingleton<SettingsPage>();
 		builder.Services.AddSingleton<NotificationsPage>();
 		builder.Services.AddSingleton<SecurityAndPrivacy>();
 		builder.Services.AddSingleton<SwitchProfile>();
 		builder.Services.AddSingleton<HelpPage>();
 
+
 		//View My Activity 
 		builder.Services.AddSingleton<MyActivitiesPage>();
 		builder.Services.AddSingleton<CommingSoonPage>();
+
+
+		//View My Activity 
+		builder.Services.AddSingleton<MyActivitiesPage>();
+		builder.Services.AddSingleton<CommingSoonPage>();
+
 
         //View SecurityAndPrivacy
         builder.Services.AddTransient<CreateTransactionPage>();

@@ -13,6 +13,6 @@ public partial class MyActivitiesPage : ContentPage
     }
     private async void OnTappedToNextPage(object sender, TappedEventArgs e)
     {
-    await Navigation.PushAsync(new ComingSoonPage());
+       await Navigation.PushAsync(new ComingSoonPage());
     }
 }
