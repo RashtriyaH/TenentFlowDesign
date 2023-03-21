@@ -2,11 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TenentFlowDesign.View.MyProfile.NotificationPage"
-             Title="NotificationPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="NotificationPage"
+             BackgroundColor="{StaticResource Black}">
+    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+
+    <Border VerticalOptions="Center" BackgroundColor="Transparent" Stroke="#1c1c1c" WidthRequest="348" >
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="15,15,15,15" />
+        </Border.StrokeShape>
+        <Grid HeightRequest="150"  WidthRequest="348" >
+            <Image Source="background_image.png" Aspect="Center">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding MoveFromProfileToSubPageCommand}" CommandParameter="4" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="Your details have been updated successfully" HorizontalTextAlignment="Center" FontSize="20" VerticalOptions="Center" TextColor="#F3E29D" />
+        </Grid>
+    </Border>
 </ContentPage>
+    
+    

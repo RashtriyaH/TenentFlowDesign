@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TenentFlowDesign.View.MyActivity.MyActivityPage"
+             xmlns:lang="clr-namespace:TenentFlowDesign.Resx"
+             Title="MyActivityPage"
+             BackgroundColor="{StaticResource Black}">
+    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+
+    <Grid>
+        <Grid VerticalOptions="Start">
+            <Border Stroke="#1C1C1C" WidthRequest="400" HeightRequest="150" VerticalOptions="Start">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,20,20" />
+                </Border.StrokeShape>
+                <Grid RowDefinitions="auto,auto,67" ColumnDefinitions="170,103"  BackgroundColor="#1C1C1C" RowSpacing="-6" Margin="-20" >
+                    <Image Source="backgroundR.png"/>
+                    <Image Source="back_arrow.png" BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="35,35,20,10" Grid.Row="0" Grid.Column="0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer  Command="{Binding MyActivityPageToMoveCommand}" CommandParameter="3" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="{x:Static lang:AppResources.OtherServices}" FontSize="22" Grid.Row="1" HeightRequest="31" WidthRequest="150"  FontFamily="Poppins"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" TextColor="{StaticResource White}"/>
+                    <Image Source="settings_image.png" Grid.Row="2" WidthRequest="50" HeightRequest="45"  HorizontalOptions="Center"  Grid.Column="1"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid RowDefinitions="130,130,130"  RowSpacing="10" VerticalOptions="Center" ColumnSpacing="10" ColumnDefinitions="*,*" >
+
+            <StackLayout Grid.Column="0" BackgroundColor="Transparent" >
+                <Image  Grid.Column="1" HeightRequest="65" Source="clock_image.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="{x:Static lang:AppResources.DigitalServices}" Grid.Column="1" TextColor="{StaticResource White}"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding MyActivityPageToMoveCommand}" CommandParameter="1" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" BackgroundColor="Transparent" >
+                <Image  Grid.Column="1" HeightRequest="65" Source="clock_image.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="{x:Static lang:AppResources.InstantProfileCheck}" Grid.Column="1" TextColor="{StaticResource White}"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding MyActivityPageToMoveCommand}" CommandParameter="1" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" BackgroundColor="Transparent" >
+                <Image Source="clock_image.png" Grid.Row="1" HeightRequest="65" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="{x:Static lang:AppResources.HomeLoan}"  Grid.Row="1" TextColor="{StaticResource White}"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding MyActivityPageToMoveCommand}" CommandParameter="1" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" >
+                <Image Source="clock_image.png" Grid.Row="1"   HeightRequest="65" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="{x:Static lang:AppResources.MutualFunds}" Grid.Row="1"  Grid.Column="1" TextColor="{StaticResource White}"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding MyActivityPageToMoveCommand}" CommandParameter="1" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" BackgroundColor="Transparent" >
+                <Image Source="clock_image.png" Grid.Row="2"   HeightRequest="65" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="{x:Static lang:AppResources.InsuranceServices}" Grid.Row="2" TextColor="{StaticResource White}"  Margin="6"  FontSize="17" VerticalTextAlignment="End" HorizontalOptions="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding MyActivityPageToMoveCommand}" CommandParameter="1" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

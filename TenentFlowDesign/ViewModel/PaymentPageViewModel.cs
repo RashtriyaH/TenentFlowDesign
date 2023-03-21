@@ -12,7 +12,7 @@ namespace TenentFlowDesign.ViewModel
     public partial class PaymentPageViewModel  : ObservableObject
     {
         [RelayCommand]
-        public async void TapCommandToMove(string param)
+        public async void TapPaymentCommandToMove(string param)
         {
             switch (param)
             {
@@ -21,6 +21,15 @@ namespace TenentFlowDesign.ViewModel
                     break;
                 case "2":
                     await Application.Current.MainPage.Navigation.PushAsync(new UpdatingTheAccountPage());
+                    break;
+                case "3":
+                    await Application.Current.MainPage.Navigation.PopAsync();
+                    break;
+                case "4":
+                    await Application.Current.MainPage.Navigation.PushAsync(new AddBankDetailsPage());
+                    break;
+                case "5":
+                    await Application.Current.MainPage.Navigation.PushAsync(new EditPageInAccountDetails());
                     break;
             }
         }

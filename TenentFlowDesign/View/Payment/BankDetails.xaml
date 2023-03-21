@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TenentFlowDesign.View.Payment.BankDetails"
+             xmlns:lang="clr-namespace:TenentFlowDesign.Resx"
              Title="BankDetails"
              BackgroundColor="{StaticResource Black}">
     <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
@@ -10,33 +11,35 @@
         <Grid VerticalOptions="Start">
             <Image Source="backgroundtop_image.png" Aspect="AspectFit" Margin="0,-100,-80,0"  VerticalOptions="Start" />
                 <Grid RowDefinitions="auto,auto,auto" RowSpacing="8" BackgroundColor="Transparent">
-                <ImageButton Source="back_arrow.png" Clicked="OnBackToPayment" BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" Grid.Column="0"/>
-                <Label Text="PAYMENTS" FontSize="20" Grid.Row="1"  FontFamily="Poppins"  VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+                <Image Source="back_arrow.png"  BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" Grid.Column="0">
+                <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="3" />
+                </Image.GestureRecognizers>
+                </Image>
+                <Label Text="{x:Static lang:AppResources.Payment}" FontSize="20" Grid.Row="1"  FontFamily="Poppins"  VerticalOptions="Center" HorizontalOptions="Center" TextColor="{StaticResource White}"/>
                 <Image Source="settings_image.png" Grid.Row="2" WidthRequest="50" HeightRequest="45"  HorizontalOptions="Center" />
             </Grid>
         </Grid>
 
         <StackLayout VerticalOptions="CenterAndExpand" Margin="10,-100,0,0" Spacing="25">
-            <Frame BorderColor="Black" CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
+            <Frame BorderColor="{StaticResource Black}" CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
                 <StackLayout Orientation="Horizontal"  Spacing="160">
-                    <Label Text="Payment History"   VerticalTextAlignment="Center" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20" />
+                    <Label Text="{x:Static lang:AppResources.PaymentHistory}"   VerticalTextAlignment="Center" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20" />
                     <Image Source="write_image.png"  />
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer 
-                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="1" />
+                                Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="1" />
                     </StackLayout.GestureRecognizers>
 
                 </StackLayout>
             </Frame>
-            <Frame BorderColor="Black"  CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
+            <Frame BorderColor="{StaticResource Black}"  CornerRadius="6" Padding="5" BackgroundColor="#1C1C1C">
                 <StackLayout Orientation="Horizontal" Spacing="160">
-                    <Label Text="Add Bank Details"   VerticalTextAlignment="Center" HorizontalOptions="Start"   TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20"/>
+                    <Label Text="{x:Static lang:AppResources.addbankdetails}"   VerticalTextAlignment="Center" HorizontalOptions="Start"   TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="20"/>
                     <Image Source="write_image.png" />
                     <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer 
-                              Tapped="OnTappedToNextPage"/>
+                        <TapGestureRecognizer  Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="4" />
                     </StackLayout.GestureRecognizers>
-
                 </StackLayout>
             </Frame>
         </StackLayout>

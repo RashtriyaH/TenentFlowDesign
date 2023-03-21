@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using TenentFlowDesign.View;
 using TenentFlowDesign.View.SecurityAndPrivacy;
@@ -14,7 +7,6 @@ namespace TenentFlowDesign.ViewModel
 {
     public partial class TappedClassViewModel : ObservableObject
     {
-
         [RelayCommand]
         public async void TapCommandToMove(string param)
         {
@@ -41,6 +33,13 @@ namespace TenentFlowDesign.ViewModel
                 case "7":
                     await Application.Current.MainPage.Navigation.PushAsync(new ChangeTransactionPasswordPage());
                     break;
+                case "8":
+                    await Application.Current.MainPage.Navigation.PopAsync();
+                    break;
+                case "9":
+                    await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
+                    break;
+
             }
         }
     }

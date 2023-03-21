@@ -2,48 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TenentFlowDesign.View.Payment.UpdatingTheAccountPage"
+             xmlns:lang="clr-namespace:TenentFlowDesign.Resx"
              Title="UpdatingTheAccountPage"  BackgroundColor="{StaticResource Black}">
     <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
     <Grid>
         <Grid VerticalOptions="Start">
             <Grid RowDefinitions="100,auto,auto" RowSpacing="6" >
                 <Image Source="backgroundtop_image.png" Aspect="AspectFill" HeightRequest="370" VerticalOptions="Start" Margin="70,-138,-96,-170"/>
-                <ImageButton Source="back_arrow.png" Clicked="OnCLickToAccountPage"  BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" Grid.Column="0"/>
-                <Label Text="Account Details" Grid.Row="0" HorizontalOptions="Center" FontSize="17" VerticalOptions="Center" TextColor="Gray" />
+                <Image Source="back_arrow.png" BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" Grid.Column="0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="3" />
+                </Image.GestureRecognizers>
+                </Image>
+                <Label Text="{x:Static lang:AppResources.AccountDetails}" Grid.Row="0" HorizontalOptions="Center" FontSize="17" VerticalOptions="Center" TextColor="{StaticResource Gray500}" />
             </Grid>
 
             <Grid RowDefinitions="auto,auto,auto,auto,auto" Margin="25,100,25,0">
                     <StackLayout Spacing="8" Grid.Row="0">
-                        <Label Grid.Row="0" Text="Account number" Margin="5,0"  FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                    <Label Grid.Row="0" Text="{x:Static lang:AppResources.accountnum}" Margin="5,0"  FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{StaticResource White}"/>
                         <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
                         <Entry  Margin="15,0,0,0" Placeholder="xxxx xxxxx xxxxx"/>
                         </Border>
                     </StackLayout>
 
                     <StackLayout Spacing="8" Grid.Row="1" Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
-                        <Label Grid.Row="1" Text="IFSC"  FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                    <Label Grid.Row="1" Text="{x:Static lang:AppResources.ifsc}"  FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{StaticResource White}"/>
                         <Border BackgroundColor="Transparent" Grid.Row="1" StrokeShape="RoundRectangle 7" StrokeThickness="1">
                             <Entry Margin="15,0,0,0" Placeholder="IFSC"/>
                         </Border>
                     </StackLayout>
 
                 <StackLayout Spacing="8" Grid.Row="2"  Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
-                        <Label Grid.Row="1" Text="Bank Name" FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                    <Label Grid.Row="1" Text="{x:Static lang:AppResources.BankName}" FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{StaticResource White}"/>
                         <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
                         <Entry  Margin="15,0,0,0" Placeholder="Indian Bank 6823"/>
                         </Border>
                     </StackLayout>
 
                 <StackLayout Spacing="8" Grid.Row="3"  Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
-                        <Label Grid.Row="1" Text="Branch"  FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+                    <Label Grid.Row="1" Text="{x:Static lang:AppResources.branch}"  FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{StaticResource White}"/>
                         <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
                         <Entry  Margin="15,0,0,0" Placeholder="xyz"/>
                         </Border>
                     </StackLayout>
 
                 <StackLayout Spacing="8" Grid.Row="4"  Margin="0,14,0,0" Grid.RowSpan="1" Grid.Column="1">
-                        <Label Grid.Row="1" Text="Account name"  FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
-                        <Border BackgroundColor="Transparent" Grid.Row="1"   StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                    <Label Grid.Row="1" Text="{x:Static lang:AppResources.accountname}"  FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{StaticResource White}"/>
+                        <Border BackgroundColor="Transparent" Grid.Row="1"  StrokeShape="RoundRectangle 7" StrokeThickness="1">
                         <Entry  Margin="15,0,0,0" Placeholder="xyz"/>
                         </Border>
                     </StackLayout>

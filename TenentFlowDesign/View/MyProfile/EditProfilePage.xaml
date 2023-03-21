@@ -2,11 +2,155 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TenentFlowDesign.View.MyProfile.EditProfilePage"
-             Title="EditProfilePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:local="clr-namespace:TenentFlowDesign.ViewModel"
+             xmlns:c="clr-namespace:TenentFlowDesign"
+             xmlns:lang="clr-namespace:TenentFlowDesign.Resx"
+             Title="EditProfilePage"
+             BackgroundColor="{StaticResource Black}">
+
+    <ContentPage.BindingContext>
+        <local:CreateProfilePageViewModel />
+    </ContentPage.BindingContext>
+
+    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
+    <Grid>
+        <ScrollView>
+            <StackLayout >
+                <Grid VerticalOptions="Start">
+                    <Border Stroke="#1C1C1C" BackgroundColor="#F3D484" WidthRequest="400" HeightRequest="90" VerticalOptions="Start">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="0,0,15,15" />
+                        </Border.StrokeShape>
+                        <Grid>
+                            <Image Source="back_arrow.png"  WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" >
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding MoveFromProfileToSubPageCommand}" CommandParameter="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="My Profile" TextColor="{StaticResource Black}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+                        </Grid>
+                    </Border>
+                    <Grid RowDefinitions="120,auto,100" >
+                        <Image Source="backgroundtop_image.png" Aspect="AspectFill" HeightRequest="370" VerticalOptions="Start" Margin="70,-138,-96,-170"/>
+                        <Image x:Name="myimage" Source="kai_image.png" HorizontalOptions="Center"  VerticalOptions="Center" Grid.Row="2" HeightRequest="184" WidthRequest="184"/>
+                        <ImageButton   x:Name="PickImage" BackgroundColor="Transparent" Clicked="OnClickedAsync" HorizontalOptions="Center" Source="write_image.png" VerticalOptions="Center" Grid.Row="2" Margin="120,0,0,-110"/>
+                    </Grid>
+                </Grid>
+
+                <Grid  Margin="35,35,0,0" ColumnDefinitions="*,*" RowSpacing="10" RowDefinitions="auto,auto,auto">
+                    <Label Text="Name" TextColor="{StaticResource White}" FontSize="15" Grid.Column="0" />
+                    <Label Text="Kai" Grid.Row="0" FontSize="15"  Grid.Column="1" TextColor="{StaticResource Gray500}"/>
+                    <Label Text="Aadhar Card" TextColor="{StaticResource White}" FontSize="15" Grid.Row="1" Grid.Column="0" />
+                    <HorizontalStackLayout Grid.Column="1" Grid.Row="1">
+                        <Label  Text="Verified" FontSize="15" TextColor="{StaticResource Gray500}"/>
+                        <Image Source="verified_image.png"  Margin="20,0" />
+                    </HorizontalStackLayout>
+                    <Label Text="PAN Card" Grid.Row="2" FontSize="15" Grid.Column="0" TextColor="{StaticResource White}"/>
+                    <HorizontalStackLayout Grid.Column="1" Grid.Row="2">
+                        <Label  Text="Verified" FontSize="15" TextColor="Gray"/>
+                        <Image Source="verified_image.png"  Margin="20,0" />
+                    </HorizontalStackLayout>
+                </Grid>
+
+                <StackLayout Margin="20,16,20,0" Spacing="20">
+                    <StackLayout Spacing="10" >
+                        <Label Text="{x:Static lang:AppResources.mobileNum}"  TextColor="{StaticResource White}"/>
+                        <Border BackgroundColor="Transparent"  StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Mobilenum}" VerticalTextAlignment="Center" Padding="12" HeightRequest="40" TextColor="{StaticResource White}" />
+                                <Button Text="Update" Command="{Binding UpdateForMobileCommand}" CommandParameter="mobile" BackgroundColor="Transparent" Margin="170,0,0,0" VerticalOptions="Center" TextColor="#F3E29D"/>
+                            </HorizontalStackLayout>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Spacing="10" >
+                        <Label Text="{x:Static lang:AppResources.emailid}"  TextColor="{StaticResource White}"/>
+                        <Border BackgroundColor="Transparent"  StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Email}" VerticalTextAlignment="Center" Padding="12" HeightRequest="40" TextColor="{StaticResource White}" />
+                                <Button Text="Update" Command="{Binding UpdateForMobileCommand}" CommandParameter="email"  BackgroundColor="Transparent" Margin="130,0,0,0" VerticalOptions="Center" TextColor="#F3E29D"/>
+                            </HorizontalStackLayout>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Spacing="10" >
+                        <Label Text="{x:Static lang:AppResources.age}"  TextColor="{StaticResource White}"/>
+                        <Border BackgroundColor="Transparent"  StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Age}" VerticalTextAlignment="Center" Padding="12" HeightRequest="40" TextColor="{StaticResource White}" />
+                            </HorizontalStackLayout>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Spacing="10" >
+                        <Label Text="{x:Static lang:AppResources.fathername}"  TextColor="{StaticResource White}"/>
+                        <Border BackgroundColor="Transparent"  StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Fathername}" VerticalTextAlignment="Center" Padding="12" HeightRequest="40" TextColor="{StaticResource White}" />
+                            </HorizontalStackLayout>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Spacing="10" >
+                        <Label Text="{x:Static lang:AppResources.spouse}"  TextColor="{StaticResource White}"/>
+                        <Border BackgroundColor="Transparent"  StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Spouse}" VerticalTextAlignment="Center" Padding="12" HeightRequest="40" TextColor="{StaticResource White}" />
+                            </HorizontalStackLayout>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Spacing="10" >
+                        <Label Text="{x:Static lang:AppResources.occupation}"  TextColor="{StaticResource White}"/>
+                        <Border BackgroundColor="Transparent"  StrokeShape="RoundRectangle 7" StrokeThickness="1">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Occupation}" VerticalTextAlignment="Center" Padding="12" HeightRequest="40" TextColor="{StaticResource White}" />
+                            </HorizontalStackLayout>
+                        </Border>
+                    </StackLayout>
+
+                    <Button Text="Submit"  VerticalOptions="End" Margin="70" Padding="8" BorderColor="#88733F" BorderWidth="1" TextColor="{StaticResource Black}" FontFamily="Poppins"  FontSize="20" CornerRadius="4"  >
+                        <Button.Shadow>
+                            <Shadow Brush="#00000080" Opacity="160" />
+                        </Button.Shadow>
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#D5B15D"/>
+                                <GradientStop Color="#FDFAC5"/>
+                                <GradientStop Color="#F3D484" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer  Command="{Binding MoveFromProfileToSubPageCommand}" CommandParameter="3" />
+                        </Button.GestureRecognizers>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <ContentView   BackgroundColor="#C0808080" IsVisible="{Binding PopupVisible}" >
+            <StackLayout  VerticalOptions="Fill" HorizontalOptions="Fill">
+                <Image Source="back_arrow.png"  WidthRequest="13" HeightRequest="24"  HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Command="{Binding MoveFromProfileToSubPageCommand}" CommandParameter="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Spacing="18">
+                <Grid VerticalOptions="Center" HeightRequest="200" WidthRequest="300" BackgroundColor="Transparent">
+                        <Image Source="background_image.png" WidthRequest="300" HeightRequest="200" />
+                        <Label Text="Hi" HorizontalTextAlignment="Center" FontSize="20" VerticalOptions="Center" TextColor="#F3E29D" >
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding UpdateType}" Value="mobile">
+                                    <Setter Property="Text" Value="Updating Mobile Number will lead to another round of verification until then all payment remain on hold"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Label" Binding="{Binding UpdateType}" Value="email">
+                                    <Setter Property="Text" Value="Updating E-mail ID will lead to another round of verification until then all payment remain on hold"/>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </Grid>
+                    <Button Text="Proceed" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="18" WidthRequest="150" BackgroundColor="#F3D484">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer  Command="{Binding MoveFromProfileToSubPageCommand}" CommandParameter="3" />
+                    </Button.GestureRecognizers>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </ContentView>
+    </Grid>
 </ContentPage>

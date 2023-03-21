@@ -10,13 +10,13 @@ public partial class AddBankDetailsPage : ContentPage
         BindingContext = new PaymentPageViewModel();
     }
 
-    private async void OnCLickToAccountPage(object sender, EventArgs e)
-    {
-		await Navigation.PopAsync();
-    }
+    //private async void OnCLickToAccountPage(object sender, EventArgs e)
+    //{
+    //    await Navigation.PopAsync();
+    //}
 
-    private async void OnCLickToEditPage(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new EditPageInAccountDetails());
-    }
+    //private async void OnCLickToEditPage(object sender, EventArgs e)
+    //{
+    //    await Navigation.PushAsync(new EditPageInAccountDetails());
+    //}
 }

@@ -117,14 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AccountDetails" xml:space="preserve">
+    <value>Account Details</value>
+  </data>
+  <data name="accountname" xml:space="preserve">
+    <value>Account name</value>
+  </data>
+  <data name="accountnum" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+  <data name="add" xml:space="preserve">
+    <value>ADD</value>
+  </data>
+  <data name="addbankaccount" xml:space="preserve">
+    <value>Add Bank Account</value>
+  </data>
+  <data name="addbankdetails" xml:space="preserve">
+    <value>Add Bank Details</value>
+  </data>
+  <data name="AddMyBankAccount" xml:space="preserve">
+    <value>Add my bank account</value>
+  </data>
+  <data name="addotherbank" xml:space="preserve">
+    <value>Add other bank account</value>
+  </data>
+  <data name="age" xml:space="preserve">
+    <value>Age</value>
+  </data>
   <data name="Appnotifi" xml:space="preserve">
     <value>App Notification</value>
+  </data>
+  <data name="bankaccount" xml:space="preserve">
+    <value>Bank Accounts</value>
+  </data>
+  <data name="BankName" xml:space="preserve">
+    <value>Bank Name</value>
+  </data>
+  <data name="branch" xml:space="preserve">
+    <value>Branch</value>
   </data>
   <data name="CfrmNwPwd" xml:space="preserve">
     <value>Confirm New Password</value>
   </data>
   <data name="ChangePassword" xml:space="preserve">
     <value>Change Transaction Password</value>
+  </data>
+  <data name="confirmaccount" xml:space="preserve">
+    <value>Confirm account</value>
   </data>
   <data name="ConfirPW" xml:space="preserve">
     <value>Confirm Password</value>
@@ -135,14 +174,59 @@
   <data name="CrntPwd" xml:space="preserve">
     <value>Current Password</value>
   </data>
+  <data name="DigitalServices" xml:space="preserve">
+    <value>Digital Services</value>
+  </data>
+  <data name="emailid" xml:space="preserve">
+    <value>Email ID</value>
+  </data>
   <data name="faq" xml:space="preserve">
     <value>FAQ</value>
+  </data>
+  <data name="fathername" xml:space="preserve">
+    <value>Father Name</value>
   </data>
   <data name="gulakTU" xml:space="preserve">
     <value>Gullak Task Updates</value>
   </data>
+  <data name="hdfc" xml:space="preserve">
+    <value>HDFC Bank 9869</value>
+  </data>
+  <data name="hdfcbankLL1" xml:space="preserve">
+    <value>HDFC Bank 9869 - LL1</value>
+  </data>
+  <data name="HomeLoan" xml:space="preserve">
+    <value>Home Loan</value>
+  </data>
+  <data name="ifsc" xml:space="preserve">
+    <value>IFSC</value>
+  </data>
+  <data name="indianbank" xml:space="preserve">
+    <value>Indian Bank x6983</value>
+  </data>
+  <data name="InstantProfileCheck" xml:space="preserve">
+    <value>Instant Profile Check</value>
+  </data>
+  <data name="InsuranceServices" xml:space="preserve">
+    <value>Insurance Services</value>
+  </data>
+  <data name="kyc" xml:space="preserve">
+    <value>KYC Documents</value>
+  </data>
   <data name="Landl" xml:space="preserve">
     <value>Landlord</value>
+  </data>
+  <data name="landlordaccount" xml:space="preserve">
+    <value>Landlord Account Details</value>
+  </data>
+  <data name="mobileNum" xml:space="preserve">
+    <value>Mobile Number</value>
+  </data>
+  <data name="MutualFunds" xml:space="preserve">
+    <value>Mutual Funds</value>
+  </data>
+  <data name="myaccoutdetails" xml:space="preserve">
+    <value>My Account Details</value>
   </data>
   <data name="Newpwd" xml:space="preserve">
     <value>New Password</value>
@@ -150,11 +234,23 @@
   <data name="Notification" xml:space="preserve">
     <value>NOTIFICATION</value>
   </data>
+  <data name="occupation" xml:space="preserve">
+    <value>Occupation</value>
+  </data>
   <data name="OfferU" xml:space="preserve">
     <value>Offer Updates</value>
   </data>
+  <data name="OtherServices" xml:space="preserve">
+    <value>Other Services</value>
+  </data>
   <data name="Passwd" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>PAYMENTS</value>
+  </data>
+  <data name="PaymentHistory" xml:space="preserve">
+    <value>Payment History</value>
   </data>
   <data name="payupdat" xml:space="preserve">
     <value>Payment Updates</value>
@@ -162,11 +258,20 @@
   <data name="RaiseST" xml:space="preserve">
     <value>Raise Support Ticket</value>
   </data>
+  <data name="Registermobileno" xml:space="preserve">
+    <value>Registered Mobile No</value>
+  </data>
+  <data name="spouse" xml:space="preserve">
+    <value>Spouse Name</value>
+  </data>
   <data name="TandC" xml:space="preserve">
     <value>Terms &amp; Conditions</value>
   </data>
   <data name="Ten" xml:space="preserve">
     <value>Tenant</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Title</value>
   </data>
   <data name="Us" xml:space="preserve">
     <value>About Us</value>

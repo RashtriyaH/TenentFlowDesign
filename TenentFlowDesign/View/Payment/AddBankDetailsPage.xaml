@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TenentFlowDesign.View.Payment.AddBankDetailsPage"
+             xmlns:lang="clr-namespace:TenentFlowDesign.Resx"
              Title="AddBankDetailsPage"
              BackgroundColor="{StaticResource Black}">
     <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>
@@ -9,12 +10,20 @@
         <Grid VerticalOptions="Start">
             <Grid RowDefinitions="auto,auto,auto" RowSpacing="8" >
                 <Image Source="backgroundtop_image.png" Aspect="AspectFill" HeightRequest="370" VerticalOptions="Start" Margin="70,-138,-96,-170"/>
-                <ImageButton Source="back_arrow.png" Clicked="OnCLickToAccountPage"  BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" />
-                <ImageButton Source="edit_image.jpg" Clicked="OnCLickToEditPage"  BackgroundColor="Transparent" WidthRequest="50" HeightRequest="24" HorizontalOptions="End" Margin="20,10,20,10" Grid.Row="0" />
-                <Label Text="Bank Accounts" Grid.Row="0" HorizontalOptions="Center" FontSize="17" VerticalOptions="Center" TextColor="Gray" />
+                <Image Source="back_arrow.png" BackgroundColor="Transparent" WidthRequest="13" HeightRequest="24" HorizontalOptions="Start" Margin="20,10,20,10" Grid.Row="0" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="3" />
+                </Image.GestureRecognizers>
+                </Image>
+                <Image Source="edit_image.jpg" BackgroundColor="Transparent" WidthRequest="50" HeightRequest="24" HorizontalOptions="End" Margin="20,10,20,10" Grid.Row="0" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="5" />
+                </Image.GestureRecognizers>
+                </Image>
+                <Label Text="{x:Static lang:AppResources.bankaccount}" Grid.Row="0" HorizontalOptions="Center" FontSize="17" VerticalOptions="Center" TextColor="Gray" />
             </Grid>
             <StackLayout VerticalOptions="End" Margin="20,100,20,0">
-                <Label Text="My Account Details" FontAttributes="Bold" FontSize="25" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+                <Label Text="{x:Static lang:AppResources.myaccoutdetails}" FontAttributes="Bold" FontSize="25" VerticalOptions="Center" HorizontalOptions="Center" TextColor="{StaticResource White}"/>
             </StackLayout>
         </Grid>
         <Grid>
@@ -22,30 +31,30 @@
                 <Frame  CornerRadius="6" Padding="5"  BackgroundColor="Transparent" BorderColor="Transparent">
                     <StackLayout Orientation="Horizontal" Spacing="20">
                         <Image Source="write_image.png"  />
-                        <Label Text="Indian Bank x6983" VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
+                        <Label Text="{x:Static lang:AppResources.indianbank}" VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer
-                                Command="{Binding TapCommandToMoveCommand}" CommandParameter="2" />
+                                Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="2" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                 </Frame>
                 <Frame  CornerRadius="6" Padding="5" BackgroundColor="Transparent" BorderColor="Transparent">
                     <StackLayout Orientation="Horizontal" Spacing="20">
                         <Image Source="write_image.png"  />
-                        <Label Text="HDFC Bank 9869"   VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
+                        <Label Text="{x:Static lang:AppResources.hdfc}"   VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer
-                                  Command="{Binding TapCommandToMoveCommand}" CommandParameter="2" />
+                                  Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="2" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                 </Frame>
                 <Frame  CornerRadius="6" Padding="5" BackgroundColor="Transparent" BorderColor="Transparent">
                     <StackLayout Orientation="Horizontal" Spacing="20">
                         <Image Source="write_image.png"  />
-                        <Label Text="Add my bank account"   VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
+                        <Label Text="{x:Static lang:AppResources.AddMyBankAccount}"   VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer
-                                  Command="{Binding TapCommandToMoveCommand}" CommandParameter="1" />
+                                  Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="1" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                 </Frame>
@@ -57,21 +66,21 @@
         
         <Grid>
             <StackLayout VerticalOptions="End" Spacing="20" Margin="40,50,10,200">
-                <Label Text="Landlord Account Details" Margin="20" FontAttributes="Bold" FontSize="22" TextColor="White"/>
+                <Label Text="{x:Static lang:AppResources.landlordaccount}" Margin="20" FontAttributes="Bold" FontSize="22" TextColor="White"/>
                 <Frame  CornerRadius="6" Padding="5" BackgroundColor="Transparent" BorderColor="Transparent">
                     <StackLayout Orientation="Horizontal" Spacing="20">
                         <Image Source="write_image.png"  />
-                        <Label Text="HDFC Bank 9869 - LL1"   VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
+                        <Label Text="{x:Static lang:AppResources.hdfcbankLL1}"   VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer
-                                   Command="{Binding TapCommandToMoveCommand}" CommandParameter="2" />
+                                   Command="{Binding TapPaymentCommandToMoveCommand}" CommandParameter="2" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
                 </Frame>
                 <Frame  CornerRadius="6" Padding="5" BackgroundColor="Transparent" BorderColor="Transparent">
                     <StackLayout Orientation="Horizontal" Spacing="20">
                         <Image Source="write_image.png"  />
-                        <Label Text="Add other bank account"   VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
+                        <Label Text="{x:Static lang:AppResources.addotherbank}"   VerticalTextAlignment="Start" HorizontalOptions="Start"  TextColor="{StaticResource White}"  FontFamily="Calibri" FontSize="18" />
                     </StackLayout>
                 </Frame>
             </StackLayout>
