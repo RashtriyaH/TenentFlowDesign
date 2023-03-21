@@ -60,16 +60,10 @@
 	  <MauiXaml Update="View\MyActivity\ComingSoonPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\MyActivity\CommingSoonPage.xaml">
+	  <MauiXaml Update="View\MyActivity\LastPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\MyActivity\MyActivitiesPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\MyProfile\CreateProfilePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\MyProfile\EditProfilePage.xaml">
+	  <MauiXaml Update="View\MyActivity\MyActivityPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\MyProfile\NotificationPage.xaml">

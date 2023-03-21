@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using TenentFlowDesign;
 using TenentFlowDesign.View;
+using TenentFlowDesign.View.MyActivity;
 using TenentFlowDesign.View.MyProfile;
 using TenentFlowDesign.View.MyTenancies;
 using TenentFlowDesign.View.Payment;
@@ -25,6 +26,7 @@ public static class MauiProgram
         //ViewModel
         builder.Services.AddTransient<TappedClassViewModel>();
         builder.Services.AddTransient<PaymentPageViewModel>();
+        builder.Services.AddSingleton<MyTenanciesPage>();
 
         //View
         //View Settings
@@ -35,8 +37,14 @@ public static class MauiProgram
 		builder.Services.AddSingleton<HelpPage>();
 
 		//View My Activity 
+		builder.Services.AddSingleton<MyActivityPage>();
+		builder.Services.AddSingleton<LastPage>();
+
+
+		//View My Activity 
 		builder.Services.AddSingleton<MyActivitiesPage>();
 		builder.Services.AddSingleton<CommingSoonPage>();
+
 
         //View SecurityAndPrivacy
         builder.Services.AddTransient<CreateTransactionPage>();
@@ -46,7 +54,7 @@ public static class MauiProgram
         
 
         //view MyProfilePage
-        builder.Services.AddTransient<CreateProfilePage>();
+        builder.Services.AddSingleton<CreateProfilePage>();
 		builder.Services.AddSingleton<EditProfilePage>();
 		builder.Services.AddSingleton<NotificationPage>();
 
