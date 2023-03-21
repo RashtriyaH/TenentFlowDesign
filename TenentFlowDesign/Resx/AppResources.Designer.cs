@@ -61,11 +61,119 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Details.
+        /// </summary>
+        internal static string AccountDetails {
+            get {
+                return ResourceManager.GetString("AccountDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account name.
+        /// </summary>
+        internal static string accountname {
+            get {
+                return ResourceManager.GetString("accountname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account number.
+        /// </summary>
+        internal static string accountnum {
+            get {
+                return ResourceManager.GetString("accountnum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ADD.
+        /// </summary>
+        internal static string add {
+            get {
+                return ResourceManager.GetString("add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Bank Account.
+        /// </summary>
+        internal static string addbankaccount {
+            get {
+                return ResourceManager.GetString("addbankaccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Bank Details.
+        /// </summary>
+        internal static string addbankdetails {
+            get {
+                return ResourceManager.GetString("addbankdetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add my bank account.
+        /// </summary>
+        internal static string AddMyBankAccount {
+            get {
+                return ResourceManager.GetString("AddMyBankAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add other bank account.
+        /// </summary>
+        internal static string addotherbank {
+            get {
+                return ResourceManager.GetString("addotherbank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age.
+        /// </summary>
+        internal static string age {
+            get {
+                return ResourceManager.GetString("age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to App Notification.
         /// </summary>
         internal static string Appnotifi {
             get {
                 return ResourceManager.GetString("Appnotifi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bank Accounts.
+        /// </summary>
+        internal static string bankaccount {
+            get {
+                return ResourceManager.GetString("bankaccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bank Name.
+        /// </summary>
+        internal static string BankName {
+            get {
+                return ResourceManager.GetString("BankName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Branch.
+        /// </summary>
+        internal static string branch {
+            get {
+                return ResourceManager.GetString("branch", resourceCulture);
             }
         }
         
@@ -84,6 +192,15 @@ namespace TenentFlowDesign.Resx {
         internal static string ChangePassword {
             get {
                 return ResourceManager.GetString("ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm account.
+        /// </summary>
+        internal static string confirmaccount {
+            get {
+                return ResourceManager.GetString("confirmaccount", resourceCulture);
             }
         }
         
@@ -115,11 +232,38 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Digital Services.
+        /// </summary>
+        internal static string DigitalServices {
+            get {
+                return ResourceManager.GetString("DigitalServices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email ID.
+        /// </summary>
+        internal static string emailid {
+            get {
+                return ResourceManager.GetString("emailid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to FAQ.
         /// </summary>
         internal static string faq {
             get {
                 return ResourceManager.GetString("faq", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Father Name.
+        /// </summary>
+        internal static string fathername {
+            get {
+                return ResourceManager.GetString("fathername", resourceCulture);
             }
         }
         
@@ -133,11 +277,119 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HDFC Bank 9869.
+        /// </summary>
+        internal static string hdfc {
+            get {
+                return ResourceManager.GetString("hdfc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HDFC Bank 9869 - LL1.
+        /// </summary>
+        internal static string hdfcbankLL1 {
+            get {
+                return ResourceManager.GetString("hdfcbankLL1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home Loan.
+        /// </summary>
+        internal static string HomeLoan {
+            get {
+                return ResourceManager.GetString("HomeLoan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IFSC.
+        /// </summary>
+        internal static string ifsc {
+            get {
+                return ResourceManager.GetString("ifsc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Indian Bank x6983.
+        /// </summary>
+        internal static string indianbank {
+            get {
+                return ResourceManager.GetString("indianbank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instant Profile Check.
+        /// </summary>
+        internal static string InstantProfileCheck {
+            get {
+                return ResourceManager.GetString("InstantProfileCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insurance Services.
+        /// </summary>
+        internal static string InsuranceServices {
+            get {
+                return ResourceManager.GetString("InsuranceServices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to KYC Documents.
+        /// </summary>
+        internal static string kyc {
+            get {
+                return ResourceManager.GetString("kyc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Landlord.
         /// </summary>
         internal static string Landl {
             get {
                 return ResourceManager.GetString("Landl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Landlord Account Details.
+        /// </summary>
+        internal static string landlordaccount {
+            get {
+                return ResourceManager.GetString("landlordaccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mobile Number.
+        /// </summary>
+        internal static string mobileNum {
+            get {
+                return ResourceManager.GetString("mobileNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mutual Funds.
+        /// </summary>
+        internal static string MutualFunds {
+            get {
+                return ResourceManager.GetString("MutualFunds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Account Details.
+        /// </summary>
+        internal static string myaccoutdetails {
+            get {
+                return ResourceManager.GetString("myaccoutdetails", resourceCulture);
             }
         }
         
@@ -160,6 +412,15 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Occupation.
+        /// </summary>
+        internal static string occupation {
+            get {
+                return ResourceManager.GetString("occupation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Offer Updates.
         /// </summary>
         internal static string OfferU {
@@ -169,11 +430,38 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Other Services.
+        /// </summary>
+        internal static string OtherServices {
+            get {
+                return ResourceManager.GetString("OtherServices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string Passwd {
             get {
                 return ResourceManager.GetString("Passwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PAYMENTS.
+        /// </summary>
+        internal static string Payment {
+            get {
+                return ResourceManager.GetString("Payment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment History.
+        /// </summary>
+        internal static string PaymentHistory {
+            get {
+                return ResourceManager.GetString("PaymentHistory", resourceCulture);
             }
         }
         
@@ -196,6 +484,24 @@ namespace TenentFlowDesign.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Registered Mobile No.
+        /// </summary>
+        internal static string Registermobileno {
+            get {
+                return ResourceManager.GetString("Registermobileno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spouse Name.
+        /// </summary>
+        internal static string spouse {
+            get {
+                return ResourceManager.GetString("spouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Terms &amp; Conditions.
         /// </summary>
         internal static string TandC {
@@ -210,6 +516,15 @@ namespace TenentFlowDesign.Resx {
         internal static string Ten {
             get {
                 return ResourceManager.GetString("Ten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        internal static string title {
+            get {
+                return ResourceManager.GetString("title", resourceCulture);
             }
         }
         
